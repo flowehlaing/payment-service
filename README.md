@@ -10,8 +10,12 @@
 ## Local Docker Build
 
 ```bash
-docker build -f deployment/Dockerfile.dev -t payment-service:local .
+docker build -f deployment/Dockerfile.local -t payment-service:local .
 ```
+
+`deployment/Dockerfile.local` builds the app from source inside Docker.
+
+`deployment/Dockerfile.dev` is used by GitHub Actions after `dotnet publish` creates the `publish/` folder.
 
 ## Run
 
